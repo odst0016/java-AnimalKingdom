@@ -30,6 +30,26 @@ public class Main {
         System.out.println(animalsCollection);
 
         filteredAnimals(animalsCollection, a -> a instanceof Mammals);
+
+        animalsCollection.sort((a1, a2) -> (a1.getYear() > a2.getYear()) ? 1 : -1);
+        System.out.println(animalsCollection);
+
+        animalsCollection.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        System.out.println(animalsCollection);
+
+        animalsCollection.sort((a1, a2) -> a1.getMovement().compareToIgnoreCase(a2.getMovement()));
+        System.out.println(animalsCollection);
+
+        filteredAnimals(animalsCollection, a -> a.getBreath().equalsIgnoreCase("lungs"));
+
+        filteredAnimals(animalsCollection, a -> a.getBreath().equalsIgnoreCase("lungs") && a.getYear() == 1758);
+
+        filteredAnimals(animalsCollection,
+                a -> a.getReproduce().equalsIgnoreCase("eggs") && a.getBreath().equalsIgnoreCase("lungs"));
+
+        animalsCollection.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        filteredAnimals(animalsCollection, a -> (a.getYear() == 1758));
+
     }
 
     public static void filteredAnimals(List<Animals> animalsCollection, AnimalTester animalTester) {

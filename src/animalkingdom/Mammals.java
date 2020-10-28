@@ -6,14 +6,17 @@ public class Mammals extends Animals {
         super(name, yearDiscovered);
     }
 
+    @Override
     public String getMovement() {
         return "Walk";
     }
 
+    @Override
     public String getBreath() {
         return "Lungs";
     }
 
+    @Override
     public String getReproduce() {
         return "Live Births";
     }

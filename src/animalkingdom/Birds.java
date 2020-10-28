@@ -6,14 +6,17 @@ public class Birds extends Animals {
         super(name, yearDiscovered);
     }
 
+    @Override
     public String getMovement() {
         return "Fly";
     }
 
+    @Override
     public String getBreath() {
         return "Lungs";
     }
 
+    @Override
     public String getReproduce() {
         return "Eggs";
     }

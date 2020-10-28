@@ -33,6 +33,12 @@ public abstract class Animals {
         this.yearDiscovered = yearDiscovered;
     }
 
+    public abstract String getMovement();
+
+    public abstract String getBreath();
+
+    public abstract String getReproduce();
+
     @Override
     public String toString() {
         return "Name: " + name + "\n" + "Year Discovered: " + yearDiscovered + "\n";
